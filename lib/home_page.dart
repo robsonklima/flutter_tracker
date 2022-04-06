@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 import 'models/localizacao.model.dart';
 import 'dart:async';
 import 'dart:convert';
@@ -37,9 +38,9 @@ class _HomePageState extends State<HomePage> {
 
             return ListTile(
               title: Text(
-                  "Localização: ${item.latitude.toString()} ${item.longitude.toString()}"),
+                  "Localização: ${item.latitude.toStringAsFixed(4)} ${item.longitude.toStringAsFixed(4)}"),
               subtitle: Text(
-                  "Velocidade: ${item.speed.toString()} km/h em ${DateTime.now()}"),
+                  "Velocidade: ${(item.speed * 1.60934).toStringAsFixed(2)} km/h às ${DateFormat('HH:mm:ss').format(DateTime.now())}"),
             );
           },
         ),

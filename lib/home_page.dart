@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(
                   "Localização: ${item.latitude.toStringAsFixed(4)} ${item.longitude.toStringAsFixed(4)}"),
               subtitle: Text(
-                  "Velocidade: ${(item.speed * 1.60934).toStringAsFixed(2)} km/h às ${DateFormat('HH:mm:ss').format(DateTime.now())}"),
+                  "Velocidade: ${(item.speed * 3.6).toStringAsFixed(2)} km/h às ${DateFormat('HH:mm:ss').format(DateTime.now())}"),
             );
           },
         ),

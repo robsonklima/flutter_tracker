@@ -63,7 +63,7 @@ class _SpeedTrackerState extends State<SpeedTracker> {
       // ignore: prefer_const_constructors
       LocationSettings settings = LocationSettings(
         accuracy: LocationAccuracy.high,
-        //distanceFilter: 100,
+        distanceFilter: 100,
       );
 
       Geolocator.getPositionStream(locationSettings: settings)
